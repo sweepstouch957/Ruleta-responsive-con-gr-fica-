@@ -693,6 +693,16 @@
     .seg-row { grid-template-columns: 20px 1.1fr 1fr .8fr; padding: 9px; gap: 6px; }
   }
 
+
+  /* Pantalla alta (kiosco vertical 9:16, celular): la rueda llena el ancho y el
+     título / rueda / PLAY se reparten a lo alto en vez de quedar apilados arriba. */
+  @media (orientation: portrait) {
+    .stage { min-height: 100dvh; justify-content: space-evenly; gap: 0; padding-block: calc(16px + env(safe-area-inset-top, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)); }
+    .pw-logo { width: min(82vw, 72dvh); }
+    .arena { --ws: clamp(240px, min(calc(100vw - 72px), calc(100dvh - 320px)), 1100px); }
+    .wheel-wrap { margin-block: calc(var(--ws) * .03) calc(var(--ws) * .04); }
+    .spin-btn { font-size: clamp(22px, 3.6vw, 40px); padding: .45em 2.2em; min-width: min(46vw, 520px); }
+  }
 </style>
 
 <canvas id="bg" aria-hidden="true"></canvas>
