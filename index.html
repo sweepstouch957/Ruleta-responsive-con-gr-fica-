@@ -702,6 +702,18 @@
     .arena { --ws: clamp(240px, min(calc(100vw - 72px), calc(100dvh - 320px)), 1100px); }
     .wheel-wrap { margin-block: calc(var(--ws) * .03) calc(var(--ws) * .04); }
     .spin-btn { font-size: clamp(22px, 3.6vw, 40px); padding: .45em 2.2em; min-width: min(46vw, 520px); }
+    /* Pantalla del teléfono: misma lógica, la tarjeta y el teclado crecen con la pantalla. */
+    .phone-screen { min-height: 100dvh; justify-content: space-evenly; gap: 0; padding-block: calc(16px + env(safe-area-inset-top, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)); }
+    .phone-screen .title-art { height: clamp(110px, 24vh, 320px); }
+    .phone-screen .ps-card { width: min(88vw, 720px); padding: clamp(26px, 3vh, 44px) clamp(22px, 3vw, 40px) clamp(22px, 3vh, 40px); gap: clamp(12px, 1.6vh, 22px); }
+    .ps-label { font-size: clamp(20px, 3.4vw, 36px); }
+    .ps-input { font-size: clamp(24px, 4.6vw, 46px); }
+    .ps-pad { gap: clamp(10px, 1.4vw, 16px); }
+    .ps-key { height: clamp(46px, 8.5vh, 110px); font-size: clamp(26px, 4.2vh, 48px); }
+    .ps-key--fn { font-size: clamp(15px, 1.8vw, 22px); }
+    .ps-key--fn[data-k="b"] { font-size: clamp(26px, 3vw, 34px); }
+    .ps-close { width: clamp(36px, 4vw, 48px); height: clamp(36px, 4vw, 48px); }
+    .ps-btn { font-size: clamp(22px, 3.6vw, 40px); }
   }
 </style>
 
